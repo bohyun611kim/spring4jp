@@ -5,9 +5,9 @@
      http://www.springframework.org/schema/beans
      http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="productService"
-		class="sample.di.business.service.ProductServiceImpl"
-		autowire="byType">
+	<!--  setter di  -->
+	<bean id="productService" class="sample.di.business.service.ProductServiceImpl">
+		<property name="productDao" ref="productDao"></property>
 	</bean>
 
 	<bean id="productDao" class="sample.di.dataaccess.ProductDaoImpl" />

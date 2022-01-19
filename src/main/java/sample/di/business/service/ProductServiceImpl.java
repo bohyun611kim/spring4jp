@@ -4,14 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import sample.di.business.domain.Product;
 
 
+
 public class ProductServiceImpl implements ProductService {
 
   private ProductDao productDao;
 
-  @Autowired 
+  @Autowired
   public void setProductDao(ProductDao productDao) {
     this.productDao = productDao;
   }
+
 
   @Override
   public void addProduct(Product product) {
