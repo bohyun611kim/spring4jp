@@ -5,9 +5,9 @@
      http://www.springframework.org/schema/beans
      http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!--  setter di  -->
+	<!--  생성자 주입 -->
 	<bean id="productService" class="sample.di.business.service.ProductServiceImpl">
-		<property name="productDao" ref="productDao"></property>
+		<constructor-arg ref="productDao"></constructor-arg>
 	</bean>
 
 	<bean id="productDao" class="sample.di.dataaccess.ProductDaoImpl" />
